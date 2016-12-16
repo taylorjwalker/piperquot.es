@@ -10,6 +10,10 @@
 	</head>
 	<body class="is-loading">
 
+		<audio id="bgaudio" loop="loop" autoplay="autoplay">
+   		<source src="audio/bg.mp3" />
+		</audio>
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -18,9 +22,13 @@
 						<audio id="is" src="audio/is.mp3" preload="auto"></audio>
 						<audio id="yes" src="audio/yes.mp3" preload="auto"></audio>
 						<audio id="no" src="audio/no.mp3" preload="auto"></audio>
-						<a href="#" class="button" onclick="document.getElementById('is').play();">Is this a tragedy?</a></br></br>
+						<audio id="shell" src="audio/shell.mp3" preload="auto"></audio>
+						<a href="#" class="button" onclick="document.getElementById('is').play();">Is this a tragedy?</a>
+						</br></br>
 						<a href="#" class="button" onclick="document.getElementById('yes').play();">Yes</a>
 						<a href="#" class="button" onclick="document.getElementById('no').play();">No</a>
+						</br></br>
+						<a href="#" onclick="document.getElementById('shell').play();"><img id="shells" src="images/shells.png"></a>
 					</section>
 
 				<!-- Footer -->
@@ -35,9 +43,13 @@
 
 			<script>
 				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, 'loaded'); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
+			</script>
+
+			<script>
+			document.getElementById("bgaudio").volume = 0.2;
 			</script>
 
 	</body>

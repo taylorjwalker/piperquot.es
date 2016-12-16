@@ -858,3 +858,8 @@
 		body.is-ie #wrapper {
 			height: 100%;
 		}
+
+#shells {
+	height: 3.75em;
+	width:auto;
+}
