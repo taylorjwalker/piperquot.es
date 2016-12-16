@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Is this a tragedy?</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<audio id="is" src="audio/is.mp3" preload="auto"></audio>
+						<audio id="yes" src="audio/yes.mp3" preload="auto"></audio>
+						<audio id="no" src="audio/no.mp3" preload="auto"></audio>
+						<a href="#" class="button" onclick="document.getElementById('is').play();">Is this a tragedy?</a></br></br>
+						<a href="#" class="button" onclick="document.getElementById('yes').play();">Yes</a>
+						<a href="#" class="button" onclick="document.getElementById('no').play();">No</a>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Taylor Walker</li>
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>
